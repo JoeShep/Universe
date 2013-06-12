@@ -1,7 +1,6 @@
 Universe
-all the schools in your orbit
 =====================
-
+all the schools in your orbit
 
 Purpose
 -------
