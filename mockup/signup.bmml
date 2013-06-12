@@ -1,0 +1,152 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="702" measuredH="702" mockupW="663" mockupH="661">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="39" y="41" w="663" h="661" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::HRule" x="67" y="177" w="401" h="-1" measuredW="100" measuredH="10" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="9" controlTypeID="__group__" x="67" y="202" w="33" h="133" measuredW="33" measuredH="133" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::VRule" x="30" y="8" w="-1" h="116" measuredW="10" measuredH="100" zOrder="0" locked="false" isInGroup="9"/>
+        <control controlID="1" controlTypeID="__group__" x="0" y="0" w="33" h="0" measuredW="33" measuredH="0" zOrder="1" locked="false" isInGroup="9">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="33" h="-1" measuredW="40" measuredH="133" zOrder="0" locked="false" isInGroup="1">
+              <controlProperties>
+                <size>32</size>
+                <text>Add%20stuff</text>
+                <textOrientation>up</textOrientation>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="116" y="214" w="103" h="33" measuredW="80" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SquaredPlusIcon%7Cxsmall</icon>
+        <text>School</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="116" y="252" w="103" h="33" measuredW="90" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SquaredPlusIcon%7Cxsmall</icon>
+        <text>Ranking</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Button" x="116" y="293" w="103" h="33" measuredW="89" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SquaredPlusIcon%7Cxsmall</icon>
+        <text>Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="__group__" x="67" y="365" w="33" h="151" measuredW="33" measuredH="151" zOrder="7" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::VRule" x="33" y="2" w="-1" h="146" measuredW="10" measuredH="100" zOrder="0" locked="false" isInGroup="13"/>
+        <control controlID="1" controlTypeID="__group__" x="0" y="0" w="33" h="0" measuredW="33" measuredH="0" zOrder="1" locked="false" isInGroup="13">
+          <groupChildrenDescriptors>
+            <control controlID="0" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="33" h="-1" measuredW="40" measuredH="151" zOrder="0" locked="false" isInGroup="1">
+              <controlProperties>
+                <size>32</size>
+                <text>View%20Stuff</text>
+                <textOrientation>up</textOrientation>
+              </controlProperties>
+            </control>
+          </groupChildrenDescriptors>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="116" y="459" w="103" h="33" measuredW="97" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EyeIcon%7Csmall</icon>
+        <text>Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="116" y="417" w="103" h="33" measuredW="97" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EyeIcon%7Csmall</icon>
+        <text>Contact</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Button" x="116" y="373" w="103" h="33" measuredW="88" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EyeIcon%7Csmall</icon>
+        <text>School</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::ModalScreen" x="197" y="203" w="253" h="372" measuredW="320" measuredH="240" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="25" controlTypeID="__group__" x="247" y="247" w="153" h="158" measuredW="153" measuredH="158" zOrder="11" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="26" w="153" h="-1" measuredW="105" measuredH="27" zOrder="0" locked="false" isInGroup="25">
+          <controlProperties>
+            <backgroundAlpha>0.75</backgroundAlpha>
+            <size>13</size>
+            <text>Your%20first%20name</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="61" w="153" h="-1" measuredW="76" measuredH="27" zOrder="1" locked="false" isInGroup="25">
+          <controlProperties>
+            <backgroundAlpha>0.75</backgroundAlpha>
+            <state>up</state>
+            <text>Username</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="17" y="136" w="119" h="22" measuredW="115" measuredH="27" zOrder="2" locked="false" isInGroup="25">
+          <controlProperties>
+            <align>left</align>
+            <text>Create%20Account</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="57" h="-1" measuredW="57" measuredH="21" zOrder="3" locked="false" isInGroup="25">
+          <controlProperties>
+            <color>16777215</color>
+            <text>New%20user</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="0" y="94" w="153" h="-1" measuredW="74" measuredH="27" zOrder="4" locked="false" isInGroup="25">
+          <controlProperties>
+            <backgroundAlpha>0.75</backgroundAlpha>
+            <state>up</state>
+            <text>Password%20</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Button" x="339" y="154" w="63" h="18" measuredW="56" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <menuIcon>false</menuIcon>
+        <size>11</size>
+        <state>disabled</state>
+        <text>sign%20in</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Link" x="410" y="154" w="-1" h="-1" measuredW="55" measuredH="19" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>new%20user</text>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::LinkBar" x="219" y="597" w="-1" h="-1" measuredW="204" measuredH="19" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml%2C%2C</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22180%2C558%2C214%2C571%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%2228%22/%3E%0A</map>
+        <text>Home%2C%20Tweet%20about%20it%2C%20email%20us</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="__group__" x="67" y="127" w="0" h="28" measuredW="0" measuredH="28" zOrder="15" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Title" x="0" y="0" w="-1" h="-1" measuredW="159" measuredH="43" zOrder="0" locked="false" isInGroup="29">
+          <controlProperties>
+            <text>Universe</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="0" y="29" w="-1" h="-1" measuredW="158" measuredH="21" zOrder="1" locked="false" isInGroup="29">
+          <controlProperties>
+            <color>3355443</color>
+            <italic>true</italic>
+            <text>all%20the%20schools%20in%20your%20orbit</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>
