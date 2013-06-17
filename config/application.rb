@@ -1,5 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
+
+
 # Pick the frameworks you want:
 require "active_record/railtie"
 require "action_controller/railtie"
@@ -64,5 +66,7 @@ module NSSCollege
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.assets.initialize_on_precompile = false
   end
 end

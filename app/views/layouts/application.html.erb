@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NSSCollege</title>
+  <title>Universe</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:500,300|Cagliostro|Pontano+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
+  <%= image_tag( "planet.png", :size => "130x100", :id =>
+    'logo') %>
+  <p><%= link_to "Universe", root_path, :id => "universe" %></p>
+  <h3 id="subtitle">all the schools in your orbit  .........................................</h3>
+  <div id="user_links">
+  <% if user_signed_in? %>
+      <%= link_to "settings", edit_user_registration_path, :class =>
+        "user_links" %>
+      <%= link_to "sign out", destroy_user_session_path, method: :delete, :class => "user_links" %>
+    <% else %>
+      <%= link_to "sign in", new_user_session_path, :id =>
+        "sign_in" %>
+      <%= link_to "sign up", new_user_registration_path, :class =>
+        "user_links" %>
+    <% end %>
+  </div>
+  <br><br>
+  <div>
+    <p id="dots1">..........</p>
+    <p class="vertical" id="add_stuff">Add Stuff....</p>
+    <ul>
+      <li><a href="#" class="navbtn"><%= "School " %></a></li><br>
+      <li><a href="#" class="navbtn"><%= "Ranking" %></a></li><br>
+      <li><a href="#" class="navbtn"><%= "Contact" %></a></li>
+    </ul>
+    <br>
+    <p id="dots2">..........</p>
+    <p class="vertical" id="view_stuff">View Stuff....</p>
+    <ul id="navbtn2">
+      <li><a href="#" class="navbtn"><%= "Schools " %></a></li><br>
+      <li><a href="#" class="navbtn"><%= "Rankings" %></a></li><br>
+      <li><a href="#" class="navbtn"><%= "My Notes" %></a></li>
+    </ul>
+  </div>
 
-<%= yield %>
-
+  <div id="content_box">
+    <div id="logo_bkgrd">
+      <%= image_tag( "planet.png", :size => "730x700") %>
+    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+  <div id="content">
+    <%= yield %>
+  </div>
 </body>
 </html>

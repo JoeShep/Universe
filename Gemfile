@@ -26,9 +26,11 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails'
   gem 'rspec-rails'
-  gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'database_cleaner'
 end
+
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
