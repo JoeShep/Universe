@@ -1,4 +1,5 @@
 
+
 Feature: Users can log in and log out
 In order to save my school visits
 As a user

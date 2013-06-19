@@ -1,0 +1,10 @@
+<% if @visits.empty? %>
+    <p>"Your visits list is empty. Time to <%= link_to "add a school", new_visit_path %></p>
+    <% else %>
+    <ul>
+      <% @visits.each do |school| %>
+        <li><%= "#{school.school_name}" %></li>
+      <% end %>
+    </ul>
+    <%= link_to "add a school", new_visit_path %>
+<%end%>

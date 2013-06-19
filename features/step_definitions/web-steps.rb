@@ -28,10 +28,6 @@ Then(/^I (?:should be able to log back in as|am logged in as)? "(.*?)" with pass
   page.should have_content("Welcome back!")
 end
 
-When(/^I go to the homepage$/) do
-  visit "/"
-end
-
 When "I open the page" do
   save_and_open_page
 end

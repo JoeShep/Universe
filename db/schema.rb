@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614183907) do
+ActiveRecord::Schema.define(:version => 20130617220233) do
+
+  create_table "rankings", :force => true do |t|
+    t.integer  "visit_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "rankings", ["visit_id"], :name => "index_rankings_on_visit_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -46,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20130614183907) do
     t.string   "class_visit"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "user_id"
   end
 
 end

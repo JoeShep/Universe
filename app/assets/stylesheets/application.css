@@ -26,12 +26,9 @@
 
  #logo_bkgrd {
    position: relative;
-   right: 120px;
-   top: 0px;
+   right: -20px;
+   top: 100px;
    opacity: 0.07;
-   -webkit-transform: rotate(-25deg);
-   -moz-transform: rotate(-25deg);
-   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
    z-index: -10;
  }
 
@@ -194,7 +191,7 @@ ul {
 #content {
   position: relative;
   bottom: 500px;
-  left: 260px;
+  left: 270px;
   z-index: 2;
   float: left;
 }

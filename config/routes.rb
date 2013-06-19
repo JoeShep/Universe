@@ -2,6 +2,12 @@ NSSCollege::Application.routes.draw do
   devise_for :users
 
   root to: "home#index"
+
+  resources :visits, only: [:index, :new, :create, :edit]
+
+  resources :visits do
+    resources :rankings
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

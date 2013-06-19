@@ -1,3 +1,4 @@
+
 Feature: User signs up
 
 Scenario: Happy path

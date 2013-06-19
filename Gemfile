@@ -22,12 +22,18 @@ end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'html2haml'
+  gem 'fabrication'
+end
+
 group :test do
   gem 'capybara'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'rspec-rails'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'fabrication'
 end
 
 gem 'devise'
