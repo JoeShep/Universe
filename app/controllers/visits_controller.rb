@@ -24,6 +24,17 @@ class VisitsController < ApplicationController
     # @ranking = @visit.rankings.new
   end
 
+  def destroy
+    @visit = Visit.find(params[:id])
+    if @visit.destroy
+      flash[:notice] = "#{@visit.school_name} has been deleted"
+      redirect_to visits_url
+    else
+      flash[:error] = "School not deleted. Try again"
+      redirect_to visits_url
+    end
+  end
+
 end
 
 

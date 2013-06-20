@@ -3,8 +3,8 @@
 <%= form_for @visit do |f| %>
   <%= f.label :school_name, "School Name: " %>
     <p><%= f.text_field :school_name %></p>
-  <%= f.label :visit_date, "Vist Date: " %>
-    <p><%= f.text_field :visit_date %></p>
+  <%= f.label :visit_date, "Vist Date: "%>
+    <p><%= f.text_field :visit_date, :placeholder => "mm/dd/yyyy"  %></p>
   <%= f.submit "Submit" %> <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{visits_url}'" %>
 <% end %>
 <%= Visit.count %>

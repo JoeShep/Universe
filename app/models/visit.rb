@@ -6,4 +6,8 @@ class Visit < ActiveRecord::Base
 
   has_one :ranking, :dependent => :destroy
   belongs_to :user
+
+  # def formatted_date
+  #   self.visit_date.strftime("%m/%d/%y") if !self.visit_date.nil?
+  # end
 end

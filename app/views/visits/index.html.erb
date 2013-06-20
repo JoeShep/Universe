@@ -3,7 +3,8 @@
     <% else %>
     <ul>
       <% @visits.each do |school| %>
-        <li><%= "#{school.school_name}" %></li>
+        <li><%= "#{school.school_name}, visited on #{school.visit_date}" %></li>
+        <%= button_to "Delete School", visit_url(school), :method => :delete %>
       <% end %>
     </ul>
     <%= link_to "add a school", new_visit_path %>
