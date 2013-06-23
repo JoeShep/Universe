@@ -5,12 +5,16 @@ class RankingsController < ApplicationController
   end
 
   def new
+    @visit = Visit.find(params[:visit_id])
     @ranking = Ranking.new
   end
 
   def create
-    @visit = Visits.find(params[:visit_id])
-    @ranking = @visit.rankings.create( params[:ranking] )
+    @visit = Visit.find(params[:visit_id])
+
+    @ranking = Ranking.new( params[:ranking] )
+    @ranking.visit_id = params[:visit_id]
+
     if @ranking.save
       flash[:notice] = "Your rankings have been added to your #{@visit.school_name} visit."
       redirect_to visit_url(@visit)

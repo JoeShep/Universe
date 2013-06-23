@@ -12,8 +12,13 @@
    <%= image_tag ("checkmark.png") if @visit.overnight? %> I stayed overnight in a dorm <br>
    <%= image_tag ("checkmark.png") if @visit.class_visit? %> I attended a class <br>
 </p>
+<p>Rankings:</p>
+  <% if !@ranking %>
   <p>You haven't ranked your visit yet. Do it now, before you forget what made <%= @visit.school_name %> so amazing or so awful.</p>
-  <%= link_to "Add Ranking", new_visit_ranking_path(@visit) %>
+  <%= link_to "Add Rankings", new_visit_ranking_path(@visit) %>
+    <% else %>
+      <p><%= "Campus: #{@ranking.campus}" %>
+  <% end %>
 
 <%= button_to "Delete School", visit_url(@visit), :method => :delete %>
 <%= link_to "see all schools", visits_path %>
