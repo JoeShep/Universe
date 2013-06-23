@@ -21,7 +21,7 @@ class VisitsController < ApplicationController
 
   def show
     @visit = Visit.find(params[:id])
-    # @ranking = @visit.rankings.new
+    # @ranking = @visit.rankings
   end
 
   def destroy

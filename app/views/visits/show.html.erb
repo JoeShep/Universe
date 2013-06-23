@@ -1,4 +1,19 @@
-<h3><%= "My visit to #{@visit.school_name} on #{@visit.visit_date}" %></h3>
+<h3><%= "Visit ID: #{@visit.id} My visit to #{@visit.school_name} on #{@visit.visit_date}" %></h3>
+<p><%= "My overall rank of #{@visit.school_name}: #{@visit.overall_ranking}" %><br>
+    <h4>Contact Info</h4>
+   <%= "Name: #{@visit.contact_name}" %><br>
+   <%= "Email: #{@visit.contact_email}" %><br>
+   <%= "Phone: #{@visit.contact_phone}" %>
+</p>
+<p><%= image_tag ("checkmark.png") if @visit.in_session? %>School was in session <br>
+   <%= image_tag ("checkmark.png") if @visit.tour? %> I took a tour<br>
+   <%= image_tag ("checkmark.png") if @visit.interview? %> I did an interview<br>
+   <%= image_tag ("checkmark.png") if @visit.info_session? %> I attended an info session <br>
+   <%= image_tag ("checkmark.png") if @visit.overnight? %> I stayed overnight in a dorm <br>
+   <%= image_tag ("checkmark.png") if @visit.class_visit? %> I attended a class <br>
+</p>
+  <p>You haven't ranked your visit yet. Do it now, before you forget what made <%= @visit.school_name %> so amazing or so awful.</p>
+  <%= link_to "Add Ranking", new_visit_ranking_path(@visit) %>
 
-
+<%= button_to "Delete School", visit_url(@visit), :method => :delete %>
 <%= link_to "see all schools", visits_path %>

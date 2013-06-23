@@ -1,0 +1,5 @@
+<%= form_for [@visit, @ranking] do |f| %>
+<%= f.select(:campus, (1..10).to_a) %>
+
+<%= f.submit "Save" %>
+<% end %>

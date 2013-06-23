@@ -3,8 +3,6 @@ NSSCollege::Application.routes.draw do
 
   root to: "home#index"
 
-  resources :visits
-
   resources :visits do
     resources :rankings
   end

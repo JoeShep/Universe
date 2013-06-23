@@ -1,0 +1,13 @@
+<% if @visits.empty? %>
+  <p>You have no school visits to rank. <%= link_to "Add a school", new_visit_path %> to your visits list and then get to ranking!</p>
+  <% else %>
+  <ul>
+    <% @visits.each do |school| %>
+
+        <li class="schools_list"><%= link_to "#{school.school_name}, visited on #{school.visit_date}", new_visit_ranking_path(school.id) %></li>
+
+    <% end %>
+  </ul>
+<%end%>
+<p>This is the rankings page, dude.</p>
+
