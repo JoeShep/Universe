@@ -6,7 +6,7 @@ h2 {
   font-family: 'Raleway', sans-serif;
 }
 
-#contact_form {
+#visit_details, #add_details_h2, #visit_save {
   display: none;
 }
 

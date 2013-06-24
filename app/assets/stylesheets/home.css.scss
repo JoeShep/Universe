@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#content {
-  left: 250px;
-}
 
 #home_arrow {
   position: relative;
@@ -13,6 +10,8 @@
 }
 
 .home_text {
+  position: relative;
+  left: -20px;
   color: #363026;
   font-size: 18px;
   font-family: 'Pontano Sans', sans-serif;
@@ -28,7 +27,7 @@
 #me {
   position: absolute;
   bottom: -208px;
-  left: 310px;
+  left: 295px;
   font-size: 14px;
   font-family: 'Cagliostro';
   opacity: 0.8;

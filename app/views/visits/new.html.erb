@@ -1,20 +1,23 @@
-<h2>Add a school to your visits list</h2>
+<h2 id="add_school_h2">Add a school to your visits list</h2>
+<h2 id="add_details_h2">A little more info and then<br>you're ready to rank.</h2>
 
 <%= form_for @visit do |f| %>
+<div id="name_date">
   <p><%= f.label :school_name, "School Name: " %><br>
     <%= f.text_field :school_name %></p>
   <p><%= f.label :visit_date, "Vist Date: "%><br>
     <%= f.text_field :visit_date, :placeholder => "mm/dd/yyyy"  %></p>
   <p><%= f.label :overall_ranking, "My overall ranking: " %><br>
-      <%= f.text_field :overall_ranking, :placeholder => "Rate your visit from 1 to 10" %></p>
-<div id="contact_form">
+      <%= f.text_field :overall_ranking, :placeholder => "Rate your visit from 1 to 10" %>
+  </p>
+</div>
+<div id="visit_details">
  <p><%= f.label :contact_name, "Contact Name: " %><br>
       <%= f.text_field :contact_name %></p>
  <p><%= f.label :contact_email, "Contact Email: " %><br>
       <%= f.text_field :contact_email %>
  <p><%= f.label :contact_phone, "Contact Phone: " %><br>
       <%= f.text_field :contact_phone %></p>
-</div>
   <p><%= f.check_box :in_session %>
     <%= f.label :in_session, "School was in session" %><br>
   <p><%= f.check_box :tour %>
@@ -28,9 +31,9 @@
   <p><%= f.check_box :class_visit %>
     <%= f.label :class_visit, "I attended a class" %><br>
   </p>
+</div>
 
-
-  <%= f.submit "Save" %> <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{visits_url}'" %>
-<% end %><br>
-
-<div class="noUiSlider"></div>
+  <%= button_tag "OK", :type => 'button', :id => "ok" %>
+  <%= f.submit "Save", :id => "visit_save" %>
+  <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{visits_url}'" %>
+<% end %>
