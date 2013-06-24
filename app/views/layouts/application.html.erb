@@ -11,15 +11,15 @@
   <%= image_tag( "planet.png", :size => "130x100", :id =>
     'logo') %>
   <p><%= link_to "Universe", root_path, :id => "universe" %></p>
-  <h3 id="subtitle">all the schools in your orbit  .........................................</h3>
-  <div id="user_links">
+  <h3 id="subtitle">all the schools in your orbit  ..................................................</h3>
+  <div id="links_div">
   <% if user_signed_in? %>
       <%= link_to "settings", edit_user_registration_path, :class =>
-        "user_links" %>
+        "user_links" %>&nbsp;
       <%= link_to "sign out", destroy_user_session_path, method: :delete, :class => "user_links" %>
     <% else %>
       <%= link_to "sign in", new_user_session_path, :id =>
-        "sign_in" %>
+        "sign_in" %>&nbsp;
       <%= link_to "sign up", new_user_registration_path, :class =>
         "user_links" %>
     <% end %>

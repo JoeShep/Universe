@@ -1,3 +1,35 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#content {
+  left: 250px;
+}
+
+#home_arrow {
+  position: relative;
+  top: 10px;
+  left: -5px;
+}
+
+.home_text {
+  color: #363026;
+  font-size: 18px;
+  font-family: 'Pontano Sans', sans-serif;
+  font-weight: bolder;
+  line-height: 1;
+}
+
+#home_text_view {
+  position: relative;
+  top: 10px;
+}
+
+#me {
+  position: absolute;
+  bottom: -208px;
+  left: 310px;
+  font-size: 14px;
+  font-family: 'Cagliostro';
+  opacity: 0.8;
+}
