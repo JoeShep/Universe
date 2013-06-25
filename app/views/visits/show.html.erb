@@ -17,7 +17,8 @@
   <p>You haven't ranked your visit yet. Do it now, before you forget what made <%= @visit.school_name %> so amazing or so awful.</p>
   <%= link_to "Add Rankings", new_visit_ranking_path(@visit) %>
     <% else %>
-      <p><%= "Campus: #{@ranking.campus}" %><br>
+      <p id="visit_rank_list">
+        <%= "Campus: #{@ranking.campus}" %><br>
         <%= "Dorms: #{@ranking.dorms}" %><br>
         <%= "Library: #{@ranking.library}" %><br>
         <%= "Majors offered: #{@ranking.majors}" %><br>
@@ -29,6 +30,7 @@
         <%= "Surrounding town/city: #{@ranking.town}" %><br>
         <%= "Intramural sports: #{@ranking.intramural_sports}" %><br>
         <%= "Activities and clubs: #{@ranking.other_activities}" %><br>
+      </p>
   <% end %>
 
 <%= button_to "Delete School", visit_url(@visit), :method => :delete %>

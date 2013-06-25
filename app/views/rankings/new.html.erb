@@ -2,18 +2,42 @@
 <h3>Rank the following from 1 to 10 <br>
 <em>(1 being gawd-awful, 10 being mind-blowingly perfect).</em></h3>
 <%= form_for [@visit, @ranking] do |f| %>
-Campus:                <%= f.select(:campus, (1..10).to_a) %><br>
-Dorms:                 <%= f.select(:dorms, (1..10).to_a) %><br>
-Library:               <%= f.select(:library, (1..10).to_a) %><br>
-Majors offered:        <%= f.select(:majors, (1..10).to_a) %><br>
-The students:          <%= f.select(:students, (1..10).to_a) %><br>
-Classrooms:            <%= f.select(:classrooms, (1..10).to_a) %><br>
-Student center:        <%= f.select(:student_center, (1..10).to_a) %><br>
-On-campus food:        <%= f.select(:food_campus, (1..10).to_a) %><br>
-Off-campus food:       <%= f.select(:food_off_campus, (1..10).to_a) %><br>
-Surrounding town/city: <%= f.select(:town, (1..10).to_a) %><br>
-Intramural sports:     <%= f.select(:intramural_sports, (1..10).to_a) %><br>
-Activities and clubs:  <%= f.select(:other_activities, (1..10).to_a) %><br>
+
+<%= f.label :campus, "Campus:" %>
+<%= f.select(:campus, (1..10).to_a) %><br>
+
+<%= f.label :dorms, "Dorms:" %>
+<%= f.select(:dorms, (1..10).to_a) %><br>
+
+<%= f.label :library, "Library:" %>
+<%= f.select(:library, (1..10).to_a) %><br>
+
+<%= f.label :majors, "Majors:" %>
+<%= f.select(:majors, (1..10).to_a) %><br>
+
+<%= f.label :students, "Students:" %>
+<%= f.select(:students, (1..10).to_a) %><br>
+
+<%= f.label :classrooms, "Classrooms:" %>
+<%= f.select(:classrooms, (1..10).to_a) %><br>
+
+<%= f.label :student_center, "Student center:" %>
+<%= f.select(:student_center, (1..10).to_a) %><br>
+
+<%= f.label :food_campus, "On-campus food:" %>
+<%= f.select(:food_campus, (1..10).to_a) %><br>
+
+<%= f.label :food_off_campus, "Off-campus food:" %>
+<%= f.select(:food_off_campus, (1..10).to_a) %><br>
+
+<%= f.label :town, "Town:" %>
+<%= f.select(:town, (1..10).to_a) %><br>
+
+<%= f.label :intramural_sports, "Intramural Sports:" %>
+<%= f.select(:intramural_sports, (1..10).to_a) %><br>
+
+<%= f.label :other_activities, "Clubs and other activities:" %>
+<%= f.select(:other_activities, (1..10).to_a) %><br>
 
 <br><%= f.submit "Save" %>
 <% end %>

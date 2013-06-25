@@ -4,6 +4,9 @@ def path_to page
     root_path
   when "the visits page"
     visits_path
+  when "the visit page"
+    @h_id = Visit.last
+    visit_path(@h_id.id)
   end
 end
 
@@ -22,6 +25,10 @@ end
 
 When(/^I fill in "(.*?)" with "(.*?)"$/) do |field_named, value|
   fill_in field_named, with: value
+end
+
+When(/^I select "(.*?)" from "(.*?)"$/) do |value, drop_menu|
+  page.select(value, :from => drop_menu)
 end
 
 Then(/^I should see the following list:$/) do |table|
