@@ -1,53 +1,5 @@
-<h2 id="add_school_h2">Add a school to your visits list</h2>
-<h2 id="add_details_h2">A little more info and then<br>you're ready to rank.</h2>
-
-<%= form_for @visit do |f| %>
-<div id="name_date">
-  <p><%= f.label :school_name, "School Name: " %><br>
-    <%= f.text_field :school_name %></p>
-  <p><%= f.label :visit_date, "Vist Date: "%><br>
-    <%= f.text_field :visit_date, :placeholder => "mm/dd/yyyy"  %></p>
-  <p><%= f.label :overall_ranking, "My overall ranking: " %><br>
-      <%= f.text_field :overall_ranking, :placeholder => "Rate your visit from 1 to 10" %>
-  </p>
+<div id="new_school_page">
+  <h2 id="add_school_h2">Add a school to your visits list</h2>
+  <h2 id="add_details_h2">A little more info and then<br>you're ready to rank.</h2>
+  <%= render :partial => "visit_form" %>
 </div>
-<div id="visit_details">
-<p>
-  Enter the vitals for someone you met during your visit.<br>
-  Have more than one? Way to network!<br>
-  Add as many as you like.<br>
- <%= f.label :contact_name, "Contact Name: " %><br>
- <%= f.text_field :contact_name %>
-</p>
-<p>
- <%= f.label :contact_email, "Contact Email: " %><br>
- <%= f.text_field :contact_email %>
-</p>
- <%= f.label :contact_phone, "Contact Phone: " %><br>
- <%= f.text_field :contact_phone %>
-</p>
-
- <%= f.check_box :in_session %>
- <%= f.label :in_session, "School was in session" %><br>
-
- <%= f.check_box :tour %>
- <%= f.label :tour, "I took a tour" %><br>
-
- <%= f.check_box :interview %>
- <%= f.label :interview, "I did an interview" %><br>
-
- <%= f.check_box :info_session %>
- <%= f.label :info_session, "I attended an info session" %><br>
-
- <%= f.check_box :overnight %>
- <%= f.label :overnight, "I stayed overnight in a dorm" %><br>
-
- <%= f.check_box :class_visit %>
- <%= f.label :class_visit, "I attended a class" %><br>
-</div>
-<p>
-  <%= button_tag "OK", :type => 'button', :id => "ok" %>
-  <%= f.submit "Save", :id => "visit_save" %>
-  <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{visits_url}'" %>
-</p>
-<% end %>

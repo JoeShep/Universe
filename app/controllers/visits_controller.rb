@@ -24,6 +24,21 @@ class VisitsController < ApplicationController
     @ranking = @visit.ranking
   end
 
+  def edit
+    @visit = Visit.find(params[:id])
+  end
+
+  def update
+    @visit = Visit.find(params[:id])
+    if @visit.update_attributes(params[:list])
+      flash[:notice] = "Your visit to #{@visit.school_name} has been updated"
+      redirect_to visits_url
+    else
+      flash[:error] = "Visit not updated. Try again"
+      redirect_to edit_visit_path(@visit)
+    end
+  end
+
   def destroy
     @visit = Visit.find(params[:id])
     if @visit.destroy

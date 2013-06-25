@@ -34,4 +34,5 @@
   <% end %>
 
 <%= button_to "Delete School", visit_url(@visit), :method => :delete %>
+<%= link_to "Edit Visit Info", edit_visit_path(@visit.id) %>
 <%= link_to "see all schools", visits_path %>
