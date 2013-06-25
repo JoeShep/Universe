@@ -28,6 +28,9 @@ TODO:
   <li> Add ability to choose a school from the visits list and see all the data about that school.</li>
 </ul>
 
+Doing:
+
+Done:
 
 Features
 --------
