@@ -7,6 +7,10 @@ h2,h3,p {
   font-family: 'Raleway', sans-serif;
 }
 
+h2, h3 {
+  text-shadow:2px 2px 2px #736A5A;
+}
+
 /******* New visit page styling *********/
 #new_school_page {
   margin-left: 40px;
@@ -40,7 +44,7 @@ h2,h3,p {
   float: right;
   position: relative;
   right: 70px;
-  bottom: 155px;
+  bottom: 165px;
   line-height: 1.3;
 }
 
