@@ -30,7 +30,7 @@ class VisitsController < ApplicationController
 
   def update
     @visit = Visit.find(params[:id])
-    if @visit.update_attributes(params[:list])
+    if @visit.update_attributes(params[:visit])
       flash[:notice] = "Your visit to #{@visit.school_name} has been updated"
       redirect_to visit_path(@visit)
     else
