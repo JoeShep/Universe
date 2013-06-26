@@ -14,7 +14,7 @@ Feature: User can save a visit
     And I fill in "School Name" with "Harvard"
     And I press "Save"
     Then I should see "Your visit to Harvard has been added to your list"
-    When I click "see all schools"
+    When I click "Schools"
     Then I should see the following list:
       | TN School of Clogging |
       | Cow College |
@@ -26,10 +26,10 @@ Feature: User can save a visit
       | school_name |
       | Harvard |
     When I go to the visit page
-    Then I should see "My visit to Harvard"
+    Then I should see "Harvard"
     When I click "Add Rankings"
     And I select "5" from "Campus"
     And I press "Save"
     Then I should see "Your rankings have been added to your Harvard visit."
-    And I should see "Campus: 5.0"
+    And I should see "Campus:"
 
