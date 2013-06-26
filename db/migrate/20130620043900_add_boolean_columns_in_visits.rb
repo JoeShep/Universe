@@ -7,5 +7,6 @@ class AddBooleanColumnsInVisits < ActiveRecord::Migration
       t.boolean :info_session
       t.boolean :overnight
       t.boolean :class_visit
+    end
   end
 end
