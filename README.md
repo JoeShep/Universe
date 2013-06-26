@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/JoeShep/Universe.png)](https://travis-ci.org/JoeShep/Universe)
+
+
+
+
 Universe
 =====================
 all the schools in your orbit
