@@ -19,8 +19,8 @@
 
  #logo_bkgrd {
    position: relative;
-   left: 68px;
-   top: 160px;
+   left: 118px;
+   top: 180px;
    opacity: 0.07;
    z-index: -10;
  }
@@ -55,7 +55,13 @@ a:visited {
  .user_links {
   font-family:'Raleway', sans-serif;
   font-size: 14px;
-  color: #302D4D
+  color: #302D4D;
+  text-decoration: none;
+}
+
+.user_links:hover {
+  color:#C2BAA3;
+  text-shadow:1px 1px 0px #5E5C5C;
 }
 
 #sign_in {
@@ -170,8 +176,8 @@ ul {
   top: 120px;
   background-image: url(/assets/noisy-texture.png);
   opacity:0.8;
-  width: 500px;
-  height: 560px;
+  width: 550px;
+  height: 580px;
   -moz-box-shadow: 10px 10px 5px #888;
   -webkit-box-shadow: 10px 10px 5px #888;
   box-shadow: 10px 10px 5px #888;
@@ -180,9 +186,13 @@ ul {
 
 #content {
   position: relative;
-  bottom: 533px;
-  left: 270px;
+  bottom: 513px;
+  left: 275px;
   z-index: 2;
-  float: left;
+  width: 500px;
 }
 
+.flashy{
+  font-size: 20px;
+  position: relative;
+}

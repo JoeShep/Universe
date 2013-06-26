@@ -1,10 +1,14 @@
+<h2>My Campus Visits</h2>
 <% if @visits.empty? %>
     <p>"Your visits list is empty. Time to <%= link_to "add a school", new_visit_path %></p>
     <% else %>
-    <ul>
-      <% @visits.each do |school| %>
-        <li class="schools_list"><%= link_to "#{school.school_name}, visited on #{school.visit_date}", visit_url(school) %></li>
-      <% end %>
-    </ul>
-    <%= link_to "add a school", new_visit_path %>
+    <div >
+      <ol>
+        <% @visits.each do |school| %>
+          <li class="schools_list"><%= link_to "#{school.school_name}", visit_url(school) %><br>
+            <%= "visited on #{school.visit_date}" %></li>
+        <% end %>
+      </ol>
+   </div>
+    <%= link_to "Add a School", new_visit_path, :class => "user_links" %>
 <%end%>

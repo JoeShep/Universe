@@ -14,14 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(document).ready(function(){
-  $("#ok").click(function(){
-    $("#visit_details").slideDown();
-    $("#visit_save").slideDown();
-    $("#name_date").slideUp();
-    $("#add_details_h2").slideDown();
-    $("#add_school_h2").slideUp();
-    $("#ok").hide();
-  });
-});
+
 

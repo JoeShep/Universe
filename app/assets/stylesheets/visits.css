@@ -2,23 +2,98 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-h2 {
+/******* All visit pages styling *********/
+h2,h3,p {
   font-family: 'Raleway', sans-serif;
+}
+
+/******* New visit page styling *********/
+#new_school_page {
+  margin-left: 40px;
 }
 
 #visit_details, #add_details_h2, #visit_save {
   display: none;
 }
 
-.slider {
-  z-index: 10;
+/******* Show single visit page styling *********/
+
+.visit_category {
+  font-size: 110%;
+  color: #C2BAA3;
+  text-shadow:2px 2px 2px #736A5A;
+  border-left: 4px solid #736A5A;
+  padding-left: 5px;
 }
 
+#show_page_admin {
+  position: relative;
+  left: 0px;
+  bottom: 20px;
+}
+
+#show_page_left {
+  width: 30%;
+}
+
+#visit_rank_list {
+  float: right;
+  position: relative;
+  right: 70px;
+  bottom: 155px;
+  line-height: 1.3;
+}
+
+#rank_numbers {
+  position: relative;
+  bottom: 256px;
+  left: 35px;
+  float: right;
+  line-height: 1.25;
+  font-size: 100%;
+  font-weight: bold;
+  color:rgb(87,9,7);
+}
+
+#contact_div {
+  float: left;
+  position: relative;
+  bottom: 20px;
+}
+
+#edit_school_link {
+  position: relative;
+  top: 15px;
+}
+
+#delete_school_btn {
+  position: relative;
+  left: 100px;
+  bottom: 5px;
+  font-size: 50%;
+  background-color: #DEDACE;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+/******* Index visits page styling *********/
+
 .schools_list a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
   text-decoration: none;
-  color: black;
+  color: #363026;
+  line-height: 1.5;
 }
 
 .schools_list a:hover {
-  color: green;
+  background-color:#C2BAA3;
 }
+
+
+
+
+
+
+
+

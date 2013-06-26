@@ -1,38 +1,87 @@
-<h3><%= "Visit ID: #{@visit.id} My visit to #{@visit.school_name} on #{@visit.visit_date}" %></h3>
-<p><%= "My overall rank of #{@visit.school_name}: #{@visit.overall_ranking}" %><br>
-    <h4>Contact Info</h4>
-   <%= "Name: #{@visit.contact_name}" %><br>
-   <%= "Email: #{@visit.contact_email}" %><br>
-   <%= "Phone: #{@visit.contact_phone}" %>
-</p>
-<p><%= image_tag ("checkmark.png") if @visit.in_session? %>School was in session <br>
-   <%= image_tag ("checkmark.png") if @visit.tour? %> I took a tour<br>
-   <%= image_tag ("checkmark.png") if @visit.interview? %> I did an interview<br>
-   <%= image_tag ("checkmark.png") if @visit.info_session? %> I attended an info session <br>
-   <%= image_tag ("checkmark.png") if @visit.overnight? %> I stayed overnight in a dorm <br>
-   <%= image_tag ("checkmark.png") if @visit.class_visit? %> I attended a class <br>
-</p>
-<p>Rankings:</p>
-  <% if !@ranking %>
-  <p>You haven't ranked your visit yet. Do it now, before you forget what made <%= @visit.school_name %> so amazing or so awful.</p>
-  <%= link_to "Add Rankings", new_visit_ranking_path(@visit) %>
-    <% else %>
-      <p id="visit_rank_list">
-        <%= "Campus: #{@ranking.campus}" %><br>
-        <%= "Dorms: #{@ranking.dorms}" %><br>
-        <%= "Library: #{@ranking.library}" %><br>
-        <%= "Majors offered: #{@ranking.majors}" %><br>
-        <%= "The students: #{@ranking.students}" %><br>
-        <%= "Classrooms: #{@ranking.classrooms}" %><br>
-        <%= "Student center: #{@ranking.student_center}" %><br>
-        <%= "On-campus food: #{@ranking.food_campus}" %><br>
-        <%= "Off-campus food: #{@ranking.food_off_campus}" %><br>
-        <%= "Surrounding town/city: #{@ranking.town}" %><br>
-        <%= "Intramural sports: #{@ranking.intramural_sports}" %><br>
-        <%= "Activities and clubs: #{@ranking.other_activities}" %><br>
-      </p>
-  <% end %>
+<h3><%= "#{@visit.school_name}"%><br>
+ &nbsp; <%= "visited on #{@visit.visit_date}" %></h3>
+<header id="show_page_admin">
+  <%= link_to "Edit Visit Info", edit_visit_path(@visit), :class => "user_links", :id => "edit_school_link" %>
+  <%= button_to "Delete School", visit_url(@visit), :method => :delete, :id => "delete_school_btn", :class => "" %>
+</header>
+<div>
+  <p><%= "Overall rank: #{@visit.overall_ranking}" %></p>
+  <p><span class="visit_category">Visit details</span></p>
+  <p class="show_page_font">
+   <% if @visit.in_session? %>
+   <%= image_tag ("checkmark.png") %> School was in session<br>
+   <%end%>
+   <% if @visit.tour? %>
+   <%= image_tag ("checkmark.png") %> I took a tour<br>
+   <%end%>
+   <% if @visit.interview? %>
+   <%= image_tag ("checkmark.png") %> I did an interview<br>
+   <%end%>
+   <% if @visit.info_session? %>
+   <%= image_tag ("checkmark.png") %> I attended an info session<br>
+   <%end%>
+   <% if @visit.overnight? %>
+   <%= image_tag ("checkmark.png") %> I stayed overnight in a dorm<br>
+   <%end%>
+   <% if @visit.class_visit? %>
+   <%= image_tag ("checkmark.png") %> I attended a class<br>
+   <%end%>
+  </p>
+</div>
 
-<%= button_to "Delete School", visit_url(@visit), :method => :delete %>
-<%= link_to "Edit Visit Info", edit_visit_path(@visit.id) %>
-<%= link_to "see all schools", visits_path %>
+<% if !@ranking %>
+<p id="ranking_prompt">You haven't ranked your visit yet.<br>
+  That's the fun part! Get to it!</p>
+<%= link_to "Add Rankings", new_visit_ranking_path(@visit), :class => "user_links" %>
+  <% else %>
+    <div id="visit_rank_list">
+      <p class="visit_category">Rankings</p>
+      <p class="show_page_font">
+        Campus:<br>
+        Dorms:<br>
+        Library:<br>
+        Majors offered:<br>
+        The students:<br>
+        Classrooms:<br>
+        Student center:<br>
+        On-campus food:<br>
+        Off-campus food:<br>
+        College town/city:<br>
+        Intramural sports:<br>
+        Clubs & other activities:<br>
+      </p>
+      <div class="show_page_font" id="rank_numbers">
+        <%= @ranking.campus %><br>
+        <%= @ranking.dorms %><br>
+        <%= @ranking.library %><br>
+        <%= @ranking.majors %><br>
+        <%= @ranking.students %><br>
+        <%= @ranking.classrooms %><br>
+        <%= @ranking.student_center %><br>
+        <%= @ranking.food_campus %><br>
+        <%= @ranking.food_off_campus %><br>
+        <%= @ranking.town %><br>
+        <%= @ranking.intramural_sports %><br>
+        <%= @ranking.other_activities %><br>
+      </div>
+    </div>
+    </p>
+<% end %>
+<p><span class="visit_category">Contact Info</span>
+  <div id="contact_div">
+    <p>
+     <% unless @visit.contact_name.blank?  %>
+     <%=  @visit.contact_name %><br>
+     <%=  @visit.contact_email %><br>
+     <%=  @visit.contact_phone %>
+    </p>
+</p>
+    <% else %>
+     <div id="no_contact">
+      <p>C'mon, add a contact.<br>All the cool kids are doing it.</p>
+      <%= link_to "Add a Contact", edit_visit_path(@visit), :class => "user_links", :id => "contact_link" %>
+     </div>
+   <% end %>
+  </div>
+
+

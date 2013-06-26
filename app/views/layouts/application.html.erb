@@ -30,7 +30,7 @@
     <p class="vertical" id="add_stuff">Add Stuff....</p>
     <ul>
       <li><a href=<%= new_visit_path %> class="navbtn"><%= "School " %></a></li><br>
-      <li><a href="#" class="navbtn"><%= "Ranking" %></a></li><br>
+      <li><a href="#" class="navbtn" id="ranking_btn"><%= "Ranking" %></a></li><br>
       <li><a href="#" class="navbtn"><%= "Contact" %></a></li>
     </ul>
     <br>
@@ -42,13 +42,12 @@
       <li><a href="#" class="navbtn"><%= "My Notes" %></a></li>
     </ul>
   </div>
-
   <div id="content_box">
+    <div class="notice flashy"><%= notice %></div>
+    <div class="alert flashy"><%= alert %></div>
     <div id="logo_bkgrd">
       <%= image_tag( "planetEDIT.png", :size => "") %>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
   </div>
   <div id="content">
     <%= yield %>
