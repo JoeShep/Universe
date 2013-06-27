@@ -10,7 +10,7 @@ Feature: User can save a visit
       | TN School of Clogging |
       | Cow College |
     When I go to the visits page
-    And I click "add a school"
+    And I click "Add a School"
     And I fill in "School Name" with "Harvard"
     And I press "Save"
     Then I should see "Your visit to Harvard has been added to your list"
