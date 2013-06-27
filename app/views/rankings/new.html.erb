@@ -1,43 +1,45 @@
 <h2> <%= @visit.school_name %> </h2>
 <h3>Rank the following from 1 to 10 <br>
-<em>(1 being gawd-awful, 10 being mind-blowingly perfect).</em></h3>
-<%= form_for [@visit, @ranking] do |f| %>
+<em><span id="new_rank_subtitle">(1 being gawd-awful, 10 being mind-blowingly perfect).</span></em></h3>
+<div id="rank_form">
+  <%= form_for [@visit, @ranking] do |f| %>
 
-<%= f.label :campus, "Campus:" %>
-<%= f.select(:campus, (1..10).to_a) %><br>
+  <%= f.label :campus, "Campus:" %>
+  <%= f.select(:campus, (1..10).to_a) %><br>
 
-<%= f.label :dorms, "Dorms:" %>
-<%= f.select(:dorms, (1..10).to_a) %><br>
+  <%= f.label :dorms, "Dorms:" %>
+  <%= f.select(:dorms, (1..10).to_a) %><br>
 
-<%= f.label :library, "Library:" %>
-<%= f.select(:library, (1..10).to_a) %><br>
+  <%= f.label :library, "Library:" %>
+  <%= f.select(:library, (1..10).to_a) %><br>
 
-<%= f.label :majors, "Majors offered:" %>
-<%= f.select(:majors, (1..10).to_a) %><br>
+  <%= f.label :majors, "Majors offered:" %>
+  <%= f.select(:majors, (1..10).to_a) %><br>
 
-<%= f.label :students, "The students:" %>
-<%= f.select(:students, (1..10).to_a) %><br>
+  <%= f.label :students, "The students:" %>
+  <%= f.select(:students, (1..10).to_a) %><br>
 
-<%= f.label :classrooms, "Classrooms:" %>
-<%= f.select(:classrooms, (1..10).to_a) %><br>
+  <%= f.label :classrooms, "Classrooms:" %>
+  <%= f.select(:classrooms, (1..10).to_a) %><br>
 
-<%= f.label :student_center, "Student center:" %>
-<%= f.select(:student_center, (1..10).to_a) %><br>
+  <%= f.label :student_center, "Student center:" %>
+  <%= f.select(:student_center, (1..10).to_a) %><br>
 
-<%= f.label :food_campus, "On-campus food:" %>
-<%= f.select(:food_campus, (1..10).to_a) %><br>
+  <%= f.label :food_campus, "On-campus food:" %>
+  <%= f.select(:food_campus, (1..10).to_a) %><br>
 
-<%= f.label :food_off_campus, "Off-campus food:" %>
-<%= f.select(:food_off_campus, (1..10).to_a) %><br>
+  <%= f.label :food_off_campus, "Off-campus food:" %>
+  <%= f.select(:food_off_campus, (1..10).to_a) %><br>
 
-<%= f.label :town, "College town/city:" %>
-<%= f.select(:town, (1..10).to_a) %><br>
+  <%= f.label :town, "College town/city:" %>
+  <%= f.select(:town, (1..10).to_a) %><br>
 
-<%= f.label :intramural_sports, "Intramural Sports:" %>
-<%= f.select(:intramural_sports, (1..10).to_a) %><br>
+  <%= f.label :intramural_sports, "Intramural Sports:" %>
+  <%= f.select(:intramural_sports, (1..10).to_a) %><br>
 
-<%= f.label :other_activities, "Clubs and other activities:" %>
-<%= f.select(:other_activities, (1..10).to_a) %><br>
+  <%= f.label :other_activities, "Clubs and other activities:" %>
+  <%= f.select(:other_activities, (1..10).to_a) %><br>
 
-<br><%= f.submit "Save" %>
-<% end %>
+  <br><%= f.submit "Save" %>
+  <% end %>
+</div>
