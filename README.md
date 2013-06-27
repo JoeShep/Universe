@@ -65,7 +65,8 @@ This is a standard Rails app:
 
 Bugs/known issues
 -----------------
-Edit function not saving changes to tables
+6/26 Add ranking, contact nav buttons inoperable
+6/26 View rankings, notes nav buttons inoperable
 
 
 As of June 26, 2013
