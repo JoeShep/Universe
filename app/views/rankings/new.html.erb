@@ -5,10 +5,22 @@
   <%= form_for [@visit, @ranking] do |f| %>
 
   <%= f.label :campus, "Campus:" %>
-  <%= f.select(:campus, (1..10).to_a) %><br>
+  <%= f.select(:campus, (1..10).to_a) %>
+  <%= button_tag "Add Comments", :type => 'button', :class=>"rank_comment_btn", :id=>"campus_btn" %>
+  <br>
+  <div id="campus_comments" class="rank_comment_box">
+    <%= text_area_tag(:campus, "", size: "40x6", :autofocus=>true) %>
+    <%= button_tag "OK", :type => 'button', :class=>"close_comment_btn" %>
+  </div>
 
   <%= f.label :dorms, "Dorms:" %>
-  <%= f.select(:dorms, (1..10).to_a) %><br>
+  <%= f.select(:dorms, (1..10).to_a) %>
+   <%= button_tag "Add Comments", :type => 'button', :class=>"rank_comment_btn", :id=>"dorms_btn" %>
+  <br>
+  <div id="dorms_comments" class="rank_comment_box">
+    <%= text_area_tag(:dorms, "", size: "40x6", :autofocus=>true) %>
+    <%= button_tag "OK", :type => 'button', :class=>"close_comment_btn" %>
+  </div>
 
   <%= f.label :library, "Library:" %>
   <%= f.select(:library, (1..10).to_a) %><br>
@@ -40,6 +52,6 @@
   <%= f.label :other_activities, "Clubs and other activities:" %>
   <%= f.select(:other_activities, (1..10).to_a) %><br>
 
-  <br><%= f.submit "Save" %>
+  <%= f.submit "Save", :id => "rank_save" %>
   <% end %>
 </div>
