@@ -21,6 +21,7 @@ I want to add details about the school and my impressions about the things that 
   - User clicks "Add Rankings"
   - If ranking a visit for the first time, user is given a list of school features (dorms, campus beauty, food service, student center, etc) to choose to rank.
   - Categories the student has chosen are presented one by one to rank, using a drop-down list of numbers from 0-10 and NA, for not applicable.
+  - Student can click on "Add Notes" for each category and enter comments about the ranking and any other related thoughts
 
 <hr />
 

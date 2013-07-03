@@ -32,4 +32,3 @@ Feature: User can save a visit
     And I press "Save"
     Then I should see "Your rankings have been added to your Harvard visit."
     And I should see "Campus:"
-
