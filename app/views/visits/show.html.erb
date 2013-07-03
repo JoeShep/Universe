@@ -4,31 +4,6 @@
   <%= link_to "Edit Visit Info", edit_visit_path(@visit), :class => "user_links", :id => "edit_school_link" %>
   <%= button_to "Delete School", visit_url(@visit), :method => :delete, :id => "delete_school_btn", :class => "" %>
 </header>
-<div>
-  <p><%= "Overall rank: #{@visit.overall_ranking}" %></p>
-  <p><span class="visit_category">Visit details</span></p>
-  <p class="show_page_font">
-   <% if @visit.in_session? %>
-   <%= image_tag ("checkmark.png") %> School was in session<br>
-   <%end%>
-   <% if @visit.tour? %>
-   <%= image_tag ("checkmark.png") %> I took a tour<br>
-   <%end%>
-   <% if @visit.interview? %>
-   <%= image_tag ("checkmark.png") %> I did an interview<br>
-   <%end%>
-   <% if @visit.info_session? %>
-   <%= image_tag ("checkmark.png") %> I attended an info session<br>
-   <%end%>
-   <% if @visit.overnight? %>
-   <%= image_tag ("checkmark.png") %> I stayed overnight in a dorm<br>
-   <%end%>
-   <% if @visit.class_visit? %>
-   <%= image_tag ("checkmark.png") %> I attended a class<br>
-   <%end%>
-  </p>
-</div>
-
 <% if !@ranking %>
 <p id="ranking_prompt">You haven't ranked your visit yet.<br>
   That's the fun part! Get to it!</p>
@@ -37,18 +12,18 @@
     <div id="visit_rank_list">
       <p class="visit_category">Rankings</p>
       <p class="show_page_font">
-        Campus:<br>
-        Dorms:<br>
-        Library:<br>
-        Majors offered:<br>
-        The students:<br>
-        Classrooms:<br>
-        Student center:<br>
-        On-campus food:<br>
-        Off-campus food:<br>
-        College town/city:<br>
-        Intramural sports:<br>
-        Clubs & other activities:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"campus_icon" %> Campus:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Dorms:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Library:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Majors offered:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> The students:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Classrooms:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Student center:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> On-campus food:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Off-campus food:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> College town/city:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Intramural sports:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Clubs/activities:<br>
       </p>
       <div class="show_page_font" id="rank_numbers">
         <%= @ranking.campus %><br>
@@ -67,6 +42,30 @@
     </div>
     </p>
 <% end %>
+<div id="show_page_left">
+  <p><%= "Overall rank: #{@visit.overall_ranking}" %></p>
+  <p><span class="visit_category">Visit details</span></p>
+  <p class="show_page_font">
+   <% if @visit.in_session? %>
+   <%= image_tag ("checkmark.png"), id %> School was in session<br>
+   <%end%>
+   <% if @visit.tour? %>
+   <%= image_tag ("checkmark.png") %> I took a tour<br>
+   <%end%>
+   <% if @visit.interview? %>
+   <%= image_tag ("checkmark.png") %> I did an interview<br>
+   <%end%>
+   <% if @visit.info_session? %>
+   <%= image_tag ("checkmark.png") %> I attended an info session<br>
+   <%end%>
+   <% if @visit.overnight? %>
+   <%= image_tag ("checkmark.png") %> I stayed overnight in a dorm<br>
+   <%end%>
+   <% if @visit.class_visit? %>
+   <%= image_tag ("checkmark.png") %> I attended a class<br>
+   <%end%>
+  </p>
+</div>
 <p><span class="visit_category">Contact Info</span>
   <div id="contact_div">
     <p>
@@ -82,6 +81,9 @@
       <%= link_to "Add a Contact", edit_visit_path(@visit), :class => "user_links", :id => "contact_link" %>
      </div>
    <% end %>
+  </div>
+  <div id="notes_box">
+    <p>Notes:</p>
   </div>
 
 

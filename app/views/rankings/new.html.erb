@@ -6,7 +6,7 @@
 
   <%= f.label :campus, "Campus:" %>
   <%= f.select(:campus, (1..10).to_a) %>
-  <%= button_tag "Add Comments", :type => 'button', :class=>"rank_comment_btn", :id=>"campus_btn" %>
+  <%= button_tag "Add Note", :type => 'button', :class=>"rank_comment_btn", :id=>"campus_btn" %>
   <br>
   <div id="campus_comments" class="rank_comment_box">
     <%= text_area_tag(:campus, "", size: "40x6", :autofocus=>true) %>
@@ -15,7 +15,7 @@
 
   <%= f.label :dorms, "Dorms:" %>
   <%= f.select(:dorms, (1..10).to_a) %>
-   <%= button_tag "Add Comments", :type => 'button', :class=>"rank_comment_btn", :id=>"dorms_btn" %>
+   <%= button_tag "Add Note", :type => 'button', :class=>"rank_comment_btn", :id=>"dorms_btn" %>
   <br>
   <div id="dorms_comments" class="rank_comment_box">
     <%= text_area_tag(:dorms, "", size: "40x6", :autofocus=>true) %>
