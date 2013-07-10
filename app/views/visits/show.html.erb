@@ -14,16 +14,16 @@
       <p class="show_page_font">
         <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"campus_icon", :data => {:note => @ranking.campus_note} %> Campus: <br>
         <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"dorms_icon", :data => {:note => @ranking.dorms_note} %> Dorms:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Library:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Majors offered:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> The students:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Classrooms:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Student center:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> On-campus food:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Off-campus food:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> College town/city:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Intramural sports:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Clubs/activities:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"library_icon", :data => {:note => @ranking.library_note}   %> Library:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"majors_icon", :data => {:note => @ranking.majors_note}   %> Majors offered:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"students_icon", :data => {:note => @ranking.students_note}   %> The students:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"classrooms_icon", :data => {:note => @ranking.classrooms_note}   %> Classrooms:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"student_center_icon", :data => {:note => @ranking.student_center_note}   %> Student center:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"food_campus_icon", :data => {:note => @ranking.food_campus_note}   %> On-campus food:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"food_off_campus_icon", :data => {:note => @ranking.food_off_campus_note}   %> Off-campus food:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"town_icon", :data => {:note => @ranking.town_note}   %> College town/city:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"intramural_icon", :data => {:note => @ranking.intramural_sports_note}   %> Intramural sports:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"other_activities_icon", :data => {:note => @ranking.other_activities_note}   %> Clubs/activities:<br>
       </p>
       <div class="show_page_font" id="rank_numbers">
         <%= @ranking.campus %><br>
@@ -82,8 +82,10 @@
      </div>
    <% end %>
   </div>
+  <% if @ranking %>
   <div id="notes_box">
     <p id="notes_p" ></p>
   </div>
+  <%end%>
 
 
