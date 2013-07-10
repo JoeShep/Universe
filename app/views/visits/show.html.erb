@@ -12,8 +12,8 @@
     <div id="visit_rank_list">
       <p class="visit_category">Rankings</p>
       <p class="show_page_font">
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"campus_icon" %> Campus:<br>
-        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Dorms:<br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"campus_icon", :data => {:note => @ranking.campus_note} %> Campus: <br>
+        <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes", :id=>"dorms_icon", :data => {:note => @ranking.dorms_note} %> Dorms:<br>
         <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Library:<br>
         <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> Majors offered:<br>
         <%= image_tag ("notes_icon.png"), :TITLE=>"View Notes"  %> The students:<br>
@@ -47,7 +47,7 @@
   <p><span class="visit_category">Visit details</span></p>
   <p class="show_page_font">
    <% if @visit.in_session? %>
-   <%= image_tag ("checkmark.png"), id %> School was in session<br>
+   <%= image_tag ("checkmark.png") %> School was in session<br>
    <%end%>
    <% if @visit.tour? %>
    <%= image_tag ("checkmark.png") %> I took a tour<br>
@@ -83,7 +83,7 @@
    <% end %>
   </div>
   <div id="notes_box">
-    <p>Notes:</p>
+    <p id="notes_p" ></p>
   </div>
 
 

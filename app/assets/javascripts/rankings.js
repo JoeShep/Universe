@@ -3,12 +3,12 @@
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready(function(){
-  $("#campus_btn").click(function(){
+  $("#ranking_campus").change(function(){
     $(".rank_comment_box").slideUp();
     $("#campus_comments").slideDown();
   });
 
-  $("#dorms_btn").click(function(){
+  $("#ranking_dorms").change(function(){
     $(".rank_comment_box").slideUp();
     $("#dorms_comments").slideDown();
   });
@@ -16,4 +16,8 @@ $(document).ready(function(){
   $(".close_comment_btn").click(function(){
     $(".rank_comment_box").slideUp();
   });
+
 });
+
+
+

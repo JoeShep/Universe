@@ -36,7 +36,3 @@ Then(/^I should see the following list:$/) do |table|
     page.should have_xpath("//ol/li[#{row+1}][contains(normalize-space(.), '#{content[0]}')]")
   end
 end
-
-When(/^I hover over "(.*?)"$/) do |arg1|
-  find('.some_class').hover
-end

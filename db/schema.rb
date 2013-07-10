@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621042900) do
+ActiveRecord::Schema.define(:version => 20130702100100) do
 
   create_table "rankings", :force => true do |t|
     t.integer  "visit_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.float    "dorms"
     t.float    "campus"
     t.float    "food_campus"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(:version => 20130621042900) do
     t.float    "student_center"
     t.float    "intramural_sports"
     t.float    "other_activities"
+    t.text     "dorms_note"
+    t.text     "campus_note"
+    t.text     "food_campus_note"
+    t.text     "food_off_campus_note"
+    t.text     "majors_note"
+    t.text     "town_note"
+    t.text     "library_note"
+    t.text     "students_note"
+    t.text     "classrooms_note"
+    t.text     "student_center_note"
+    t.text     "intramural_sports_note"
+    t.text     "other_activities_note"
   end
 
   add_index "rankings", ["visit_id"], :name => "index_rankings_on_visit_id"

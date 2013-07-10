@@ -34,6 +34,7 @@ group :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'fabrication'
+  gem "capybara-webkit", "~> 1.0.0"
 end
 
 gem 'devise'

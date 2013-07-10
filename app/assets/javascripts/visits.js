@@ -12,6 +12,12 @@ $(document).ready(function(){
     $("#ok").hide();
   });
 
+  $("#campus_icon").one('mouseover', function(){
+      $("#notes_p").html(($("#campus_icon").data("note")));
+  });
 
+  $("#dorms_icon").one('mouseover', function(){
+      $("#notes_p").html(($("#dorms_icon").data("note")));
+  });
 });
 
