@@ -1,5 +1,6 @@
 <h3><%= "#{@visit.school_name}"%><br>
  &nbsp; <%= "visited on #{@visit.visit_date}" %></h3>
+ <p><%= "Overall rank: #{@visit.overall_ranking}" %></p>
 <header id="show_page_admin">
   <%= link_to "Edit Visit Info", edit_visit_path(@visit), :class => "user_links", :id => "edit_school_link" %>
   <%= button_to "Delete School", visit_url(@visit), :method => :delete, :id => "delete_school_btn", :class => "" %>
@@ -7,7 +8,10 @@
 <% if !@ranking %>
 <p id="ranking_prompt">You haven't ranked your visit yet.<br>
   That's the fun part! Get to it!</p>
-<%= link_to "Add Rankings", new_visit_ranking_path(@visit), :class => "user_links" %>
+<p>
+  <%= link_to "Add Rankings", new_visit_ranking_path(@visit), :class => "user_links" %>
+</p>
+<br>
   <% else %>
     <div id="visit_rank_list">
       <p class="visit_category">Rankings</p>
@@ -43,7 +47,6 @@
     </p>
 <% end %>
 <div id="show_page_left">
-  <p><%= "Overall rank: #{@visit.overall_ranking}" %></p>
   <p><span class="visit_category">Visit details</span></p>
   <p class="show_page_font">
    <% if @visit.in_session? %>

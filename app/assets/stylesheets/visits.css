@@ -87,6 +87,14 @@ h2, h3 {
   width: 90%;
 }
 
+#notes_p {
+  position: absolute;
+}
+
+#ranking_prompt {
+  margin-top: -10px;
+}
+
 /******* Index visits page styling *********/
 
 .schools_list a {

@@ -12,7 +12,7 @@ Feature: User can save a visit
     When I go to the visits page
     And I click "Add a School"
     And I fill in "School Name" with "Harvard"
-    And I press "Save"
+    And I press "Rank Stuff"
     Then I should see "Your visit to Harvard has been added to your list"
     When I click "Schools"
     Then I should see the following list:

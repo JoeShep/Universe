@@ -45,8 +45,8 @@
    </p>
   </div>
   <p>
-    <%= button_tag "Next", :type => 'button', :id => "ok" %>
-    <%= f.submit "Save", :id => "visit_save" %>
+    <%= button_tag "Next", :type => 'button', :id => "next" %>
+    <%= f.submit "Rank Stuff", :id => "visit_save", :class => "rank_btn" %>
     <%= button_tag "Cancel",:type => 'button', :onclick => "location.href = '#{visits_url}'" %>
   </p>
   <% end %>

@@ -1,0 +1,90 @@
+<div id="rank_form">
+  <%= form_for [@visit, @ranking] do |f| %>
+
+  <%= f.label :campus, "Campus:" %>
+  <%= f.select(:campus, (1..10).to_a) %>
+  <br>
+  <div id="campus_comments" class="rank_comment_box">
+    <%= f.text_area :campus_note, :cols => 39, :rows => 6, :autofocus=> true, :placeholder => "Notes about #{@visit.school_name}'s campus" %>
+  </div>
+
+  <%= f.label :dorms, "Dorms:" %>
+  <%= f.select(:dorms, (1..10).to_a) %>
+  <br>
+  <div id="dorms_comments" class="rank_comment_box">
+    <%= f.text_area :dorms_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s dorms" %>
+  </div>
+
+  <%= f.label :library, "Library:" %>
+  <%= f.select(:library, (1..10).to_a) %>
+  <br>
+  <div id="library_comments" class="rank_comment_box">
+    <%= f.text_area :library_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s library"  %>
+  </div>
+
+  <%= f.label :majors, "Majors offered:" %>
+  <%= f.select(:majors, (1..10).to_a) %>
+  <br>
+  <div id="majors_comments" class="rank_comment_box">
+    <%= f.text_area :majors_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s majors I'm interested in"  %>
+  </div>
+
+  <%= f.label :students, "The students:" %>
+  <%= f.select(:students, (1..10).to_a) %>
+  <br>
+  <div id="students_comments" class="rank_comment_box">
+    <%= f.text_area :students_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about the students at #{@visit.school_name}"  %>
+  </div>
+
+  <%= f.label :classrooms, "Classrooms:" %>
+  <%= f.select(:classrooms, (1..10).to_a) %>
+  <br>
+  <div id="classrooms_comments" class="rank_comment_box">
+    <%= f.text_area :classrooms_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s classrooms"  %>
+  </div>
+
+  <%= f.label :student_center, "Student center:" %>
+  <%= f.select(:student_center, (1..10).to_a) %>
+  <br>
+  <div id="student_center_comments" class="rank_comment_box">
+    <%= f.text_area :student_center_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s student center"  %>
+  </div>
+
+  <%= f.label :food_campus, "On-campus food:" %>
+  <%= f.select(:food_campus, (1..10).to_a) %>
+  <br>
+  <div id="food_campus_comments" class="rank_comment_box">
+    <%= f.text_area :food_campus_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s dining hall food"  %>
+  </div>
+
+  <%= f.label :food_off_campus, "Off-campus food:" %>
+  <%= f.select(:food_off_campus, (1..10).to_a) %>
+  <br>
+  <div id="food_off_campus_comments" class="rank_comment_box">
+    <%= f.text_area :food_off_campus_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s off-campus food choices"  %>
+  </div>
+
+  <%= f.label :town, "College town/city:" %>
+  <%= f.select(:town, (1..10).to_a) %>
+  <br>
+  <div id="town_comments" class="rank_comment_box">
+    <%= f.text_area :town_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about the town that #{@visit.school_name} calls home"  %>
+  </div>
+
+  <%= f.label :intramural_sports, "Intramural Sports:" %>
+  <%= f.select(:intramural_sports, (1..10).to_a) %>
+  <br>
+  <div id="intramural_sports_comments" class="rank_comment_box">
+    <%= f.text_area :intramural_sports_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s intramural sports"  %>
+  </div>
+
+  <%= f.label :other_activities, "Clubs and other activities:" %>
+  <%= f.select(:other_activities, (1..10).to_a) %>
+  <br>
+  <div id="other_activities_comments" class="rank_comment_box">
+    <%= f.text_area :other_activities_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about other activities and clubs at #{@visit.school_name}"  %>
+  </div>
+
+  <%= f.submit "Save", :id => "rank_save" %>
+  <% end %>
+</div>

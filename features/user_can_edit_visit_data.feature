@@ -15,7 +15,7 @@ Feature: User can edit visit data
     And I fill in "Visit Date" with "08/23/2013"
     Then I click "Next"
     And I fill in "Contact Name" with "Johnny Jones"
-    Then I click "Save"
+    Then I click "Rank Stuff"
     Then I should see "Your visit to Cow College has been updated"
     And I should see "visited on 08/23/2013"
     And I should see "Johnny Jones"

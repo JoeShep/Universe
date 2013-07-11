@@ -12,7 +12,7 @@ class VisitsController < ApplicationController
     @visit = current_user.visits.build( params[:visit] )
     if @visit.save
       flash[:notice] = "Your visit to #{@visit.school_name} has been added to your list."
-      redirect_to visit_url(@visit)
+      redirect_to new_visit_ranking_url(@visit)
     else
       flash[:error] = "Visit to #{:school_name} not saved. Try again."
       render :new
