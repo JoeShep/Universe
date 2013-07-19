@@ -2,6 +2,7 @@ class RankingsController < ApplicationController
 
   def index
     @visits = current_user.visits.all
+    @rankings = @visits.ranking
   end
 
   def new

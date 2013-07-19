@@ -1,0 +1,2 @@
+Fabricator(:ranking) do
+end

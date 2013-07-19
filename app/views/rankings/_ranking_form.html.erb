@@ -5,14 +5,14 @@
   <%= f.select(:campus, (1..10).to_a) %>
   <br>
   <div id="campus_comments" class="rank_comment_box">
-    <%= f.text_area :campus_note, :cols => 39, :rows => 6, :autofocus=> true, :placeholder => "Notes about #{@visit.school_name}'s campus" %>
+    <%= f.text_area :campus_note, :cols => 39, :rows => 6, :autofocus=> true, :placeholder => "Notes about #{@visit.school_name}'s campus", :id => "campus_note" %>
   </div>
 
   <%= f.label :dorms, "Dorms:" %>
   <%= f.select(:dorms, (1..10).to_a) %>
   <br>
   <div id="dorms_comments" class="rank_comment_box">
-    <%= f.text_area :dorms_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s dorms" %>
+    <%= f.text_area :dorms_note, :cols => 39, :rows => 6, :autofocus=>true, :placeholder => "Notes about #{@visit.school_name}'s dorms", :id => "dorms_note" %>
   </div>
 
   <%= f.label :library, "Library:" %>

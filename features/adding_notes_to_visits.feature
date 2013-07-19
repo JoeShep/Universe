@@ -16,4 +16,4 @@ Feature: User can add notes to a visit
     Then I press "Save"
     Then I should see "Your rankings have been added to your Harvard visit."
     And I should see "Campus:"
-    And I should see "5.0"
+    And I should see "5"
