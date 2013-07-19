@@ -30,12 +30,13 @@ class VisitsController < ApplicationController
 
   def update
     @visit = Visit.find(params[:id])
+    @ranking = @visit.ranking
     if @visit.update_attributes(params[:visit])
       flash[:notice] = "Your visit to #{@visit.school_name} has been updated"
-      redirect_to visit_path(@visit)
+      render "rankings/edit"
     else
       flash[:error] = "Visit not updated. Try again"
-      redirect_to edit_visit_path(@visit)
+      redirect_to edit_visit_url(@visit)
     end
   end
 
