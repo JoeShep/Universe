@@ -3,6 +3,9 @@
 // # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready(function(){
+
+  $(".notice").delay(2000).fadeOut('slow');
+
   $("#next").click(function(){
     $("#visit_details").slideDown();
     $(".rank_btn").slideDown();
