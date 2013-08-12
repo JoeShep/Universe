@@ -63,6 +63,9 @@ This is a standard Rails app:
 4. `rails server`
 5. Go to localhost:3000
 
+<p>Want to try before you buy? Check it out at http://nssuniverse.herokuapp.com/ -- Please note that the Heroku server can take a few moments to spin up. Patience is a virtue, or so I hear.
+</p>
+
 Bugs/known issues
 -----------------
 6/26 Add ranking, contact nav buttons inoperable
